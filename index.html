@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saira's Signature - Beauty Spa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <img src="./assets/Saira_s Signature Logo.png" alt="Saira's Signature Logo" class="logo" />
+            <div class="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose">Why Choose Us</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Image on Right -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transform Your Beauty with Expert Care</h1>
+            <p>
+                Experience the difference with personalized treatments and
+                professional expertise at Saira's Signature. Our premium beauty
+                services will reveal your most radiant self.
+            </p>
+            <a href="#contact" class="cta-button">Book Your Appointment</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1599351431408-433ef72fe40b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
+                alt="Beauty Treatments" />
+        </div>
+    </section>
+
+    <!-- Services Section with Toggleable Tabs -->
+    <section id="services" class="section">
+        <h2 class="section-title fade-in">Our Premium Services</h2>
+
+        <div class="services-tabs">
+            <button class="tab-btn active" data-tab="threading">
+                Threading & Waxing
+            </button>
+            <button class="tab-btn" data-tab="tint">Tint & Lamination</button>
+            <button class="tab-btn" data-tab="facials">Facial Treatments</button>
+            <button class="tab-btn" data-tab="advanced">Advanced Treatments</button>
+            <button class="tab-btn" data-tab="makeup">Makeup & Extensions</button>
+        </div>
+
+        <div class="services-content">
+            <!-- Threading & Waxing -->
+            <div class="service-category active" id="threading">
+                <h3>Threading & Waxing Services</h3>
+                <ul class="service-list">
+                    <li>Eyebrows Threading</li>
+                    <li>Eyebrows Waxing</li>
+                    <li>Upper Lips Threading</li>
+                    <li>Upper Lips Waxing</li>
+                    <li>Chin Threading</li>
+                    <li>Chin Waxing</li>
+                    <li>Sideburns Threading</li>
+                    <li>Sideburns Waxing</li>
+                    <li>Neck Waxing or Threading</li>
+                    <li>Full Face Threading</li>
+                    <li>Full Face Waxing</li>
+                    <li>Half Arm Waxing</li>
+                    <li>Full Arm Waxing</li>
+                    <li>Half Legs Waxing</li>
+                    <li>Full Legs Waxing</li>
+                    <li>Full Body Waxing</li>
+                </ul>
+            </div>
+
+            <!-- Tint & Lamination -->
+            <div class="service-category" id="tint">
+                <h3>Tint & Lamination Services</h3>
+                <ul class="service-list">
+                    <li>Eyebrows Tint</li>
+                    <li>Eyebrows Henna</li>
+                    <li>Eyebrows Lamination</li>
+                    <li>Eyebrows Lamination & Tint</li>
+                    <li>Eyelash Lift</li>
+                    <li>Eyelash Lift & Tint</li>
+                    <li>Lash Tinting</li>
+                    <li>Brow Shaping with Tint</li>
+                    <li>Lash and Brow Combo</li>
+                </ul>
+            </div>
+
+            <!-- Facial Treatments -->
+            <div class="service-category" id="facials">
+                <h3>Facial Treatments</h3>
+                <ul class="service-list">
+                    <li>Classic Facial</li>
+                    <li>Vitamin C Brightening Facial</li>
+                    <li>Hydra Facial</li>
+                    <li>Signature Facial for Lifting & Toning</li>
+                    <li>Acne Facial</li>
+                    <li>Anti-Aging Facial</li>
+                    <li>Collagen Facial</li>
+                    <li>Gold Facial Treatment</li>
+                    <li>Oxygen Facial</li>
+                </ul>
+            </div>
+
+            <!-- Advanced Treatments -->
+            <div class="service-category" id="advanced">
+                <h3>Advanced Skin Treatments</h3>
+                <ul class="service-list">
+                    <li>Microneedling</li>
+                    <li>Microdermabrasion</li>
+                    <li>Cold Plasma Treatment</li>
+                    <li>Chemical Peel</li>
+                    <li>LED Light Treatment</li>
+                    <li>High Frequency Treatment</li>
+                    <li>Hot and Cold Treatment</li>
+                    <li>Ultrasonic Facial Treatment</li>
+                    <li>Laser Skin Resurfacing</li>
+                    <li>Dermaplaning</li>
+                </ul>
+            </div>
+
+            <!-- Makeup & Extensions -->
+            <div class="service-category" id="makeup">
+                <h3>Makeup & Extensions</h3>
+                <ul class="service-list">
+                    <li>Party Makeup</li>
+                    <li>Bridal Makeup</li>
+                    <li>Eye Makeup</li>
+                    <li>Cluster Eyelash Extension</li>
+                    <li>Individual Lashes</li>
+                    <li>Volume Lashes</li>
+                    <li>Hybrid Lashes</li>
+                    <li>Makeup Lessons</li>
+                    <li>Special Effects Makeup</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full-width Why Choose Us Section -->
+    <section id="why-choose" class="full-width-section why-choose">
+        <h2 class="section-title fade-in">Why Choose Saira's Signature?</h2>
+        <div class="features-grid">
+            <div class="feature fade-in">
+                <div class="feature-icon">🏆</div>
+                <h3>Expert Professionals</h3>
+                <p>
+                    Our certified specialists bring years of experience and expertise to
+                    every treatment.
+                </p>
+            </div>
+            <div class="feature fade-in">
+                <div class="feature-icon">✨</div>
+                <h3>Premium Products</h3>
+                <p>
+                    We use only the highest quality, professional-grade products for
+                    optimal results.
+                </p>
+            </div>
+            <div class="feature fade-in">
+                <div class="feature-icon">💎</div>
+                <h3>Personalized Care</h3>
+                <p>
+                    Every treatment is customized to meet your individual skin needs and
+                    beauty goals.
+                </p>
+            </div>
+            <div class="feature fade-in">
+                <div class="feature-icon">🌟</div>
+                <h3>Latest Techniques</h3>
+                <p>
+                    Stay ahead with cutting-edge beauty treatments and advanced skincare
+                    technology.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section">
+        <h2 class="section-title fade-in">About Us</h2>
+        <div class="about-content">
+            <div class="about-text fade-in">
+                <p>
+                    Meet Saira - an esthetician, beauty specialist, certified laser
+                    expert, lash and makeup artist, and a PCA professional. With over a
+                    decade of experience in the beauty industry, Saira has perfected her
+                    craft in prestigious salons and medical spas.
+                </p>
+                <p>
+                    Her diverse experience has equipped her with a deep understanding of
+                    client needs and the art of skincare. Saira's commitment to
+                    excellence ensures that every client leaves with heightened
+                    confidence and satisfaction in their revitalized skin.
+                </p>
+                <p>
+                    At Saira's Signature, we believe that beauty is about feeling
+                    confident in your own skin. Our mission is to provide exceptional
+                    treatments that enhance your natural beauty while prioritizing your
+                    skin's health and wellbeing.
+                </p>
+                <a href="#contact" class="cta-button">Schedule Consultation</a>
+            </div>
+            <div class="about-image fade-in">
+                <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                    alt="Saira - Beauty Specialist" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Full-width Testimonials Carousel -->
+    <section id="testimonials" class="full-width-section testimonials">
+        <div class="testimonials-container">
+            <h2 class="section-title fade-in">What Our Clients Say</h2>
+            <div class="testimonial-slider">
+                <div class="slider-arrows">
+                    <div class="slider-arrow prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="slider-arrow next">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="testimonial-track">
+                    <!-- Testimonial 1 -->
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Saira's expertise is unmatched! My skin has never looked
+                            better. The personalized treatment plan she created for me
+                            worked wonders. I've tried many clinics, but none come close to
+                            the care and attention I receive here."
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Sarah Johnson" />
+                            <div>
+                                <strong>Sarah Johnson</strong>
+                                <div>Regular Client for 2 years</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Professional, clean, and amazing results every time. I wouldn't
+                            trust my skincare to anyone else. The staff is incredibly
+                            knowledgeable and makes you feel comfortable from the moment you
+                            walk in. Highly recommend!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maria Rodriguez" />
+                            <div>
+                                <strong>Maria Rodriguez</strong>
+                                <div>Bridal Makeup Client</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "The best beauty experience I've ever had. Saira's attention to
+                            detail and caring approach makes all the difference. My skin
+                            transformation has been incredible - friends keep asking what my
+                            secret is!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ashley Chen" />
+                            <div>
+                                <strong>Ashley Chen</strong>
+                                <div>Acne Treatment Client</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "I've been coming to Saira for over a year now, and I'm
+                            continually impressed. The results speak for themselves. The
+                            clinic has a relaxing atmosphere, and the team remembers your
+                            preferences. Worth every penny!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/26.jpg" alt="Jessica Williams" />
+                            <div>
+                                <strong>Jessica Williams</strong>
+                                <div>Monthly Facial Client</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="testimonial">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Saira completely transformed my skincare routine. After just
+                            three sessions, my complexion is clearer and brighter than it's
+                            been in years. The personalized approach makes all the
+                            difference. I couldn't be happier!"
+                        </p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/53.jpg" alt="Emily Thompson" />
+                            <div>
+                                <strong>Emily Thompson</strong>
+                                <div>Skin Rejuvenation Client</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-nav">
+                    <div class="slider-dot active"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                    <div class="slider-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Google Map -->
+    <section id="contact" class="section">
+        <h2 class="section-title fade-in">Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-info fade-in">
+                <h3>Get in Touch</h3>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>
+                            91 Randhurst Village Dr #116<br />Mount Prospect, IL 60056<br />United
+                            States
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+1 (773) 799-4856</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@sairasignature.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>
+                            Mon-Fri: 10:00 AM - 06:00 PM<br />Sat: 10:00 AM - 04:00 PM<br />Sun:
+                            Closed
+                        </p>
+                    </div>
+                </div>
+
+                <div class="google-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.117251199927!2d-87.96394452433292!3d42.10766725344781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fba1c9d0b5b1f%3A0x8a7e6c0e4b8f3b1c!2s91%20Randhurst%20Village%20Dr%20%23116%2C%20Mount%20Prospect%2C%20IL%2060056%2C%20USA!5e0!3m2!1sen!2s!4v1690384567890!5m2!1sen!2s"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="contact-form fade-in">
+                <h3>Book an Appointment</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your email address" />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Your phone number" />
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="threading">Threading & Waxing</option>
+                            <option value="tint">Tint & Lamination</option>
+                            <option value="facials">Facial Treatments</option>
+                            <option value="advanced">Advanced Treatments</option>
+                            <option value="makeup">Makeup & Extensions</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Tell us about your beauty goals or any specific concerns..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3><i class="fas fa-spa"></i> Saira's Signature</h3>
+                <p>
+                    Transform your beauty with our expert skincare and beauty
+                    treatments. Experience the difference with personalized care and
+                    professional expertise.
+                </p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#home"><i class="fas fa-chevron-right"></i> Home</a>
+                    </li>
+                    <li>
+                        <a href="#services"><i class="fas fa-chevron-right"></i> Services</a>
+                    </li>
+                    <li>
+                        <a href="#about"><i class="fas fa-chevron-right"></i> About Us</a>
+                    </li>
+                    <li>
+                        <a href="#testimonials"><i class="fas fa-chevron-right"></i> Testimonials</a>
+                    </li>
+                    <li>
+                        <a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chevron-right"></i> Privacy Policy</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Our Services</h3>
+                <ul class="footer-links">
+                    <li>
+                        <a href="#"><i class="fas fa-chevron-right"></i> Facial Treatments</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chevron-right"></i> Skincare Solutions</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chevron-right"></i> Hair Removal</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chevron-right"></i> Lash & Brow Services</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chevron-right"></i> Makeup Artistry</a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-chevron-right"></i> Advanced Treatments</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Newsletter</h3>
+                <p>
+                    Subscribe to our newsletter for the latest updates and special
+                    offers.
+                </p>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Your email address" />
+                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                </div>
+                <div class="contact-item" style="margin-top: 1.5rem; color: #bbb">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>+1 (773) 799-4856</span>
+                </div>
+                <div class="contact-item" style="color: #bbb">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@sairasignature.com</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>&copy; 2025 Saira's Signature Beauty Spa. All rights reserved.</p>
+            <p>Transform your beauty, enhance your confidence.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
