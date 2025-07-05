@@ -113,39 +113,22 @@ tabButtons.forEach(button => {
 // Testimonial Carousel Functionality
 const track = document.querySelector('.testimonial-track');
 const dots = document.querySelectorAll('.slider-dot');
-const prevBtn = document.querySelector('.slider-arrow.prev');
-const nextBtn = document.querySelector('.slider-arrow.next');
 const testimonials = document.querySelectorAll('.testimonial');
 
 let currentIndex = 0;
-const testimonialWidth = testimonials[0].offsetWidth + 30; // including margin
+let testimonialWidth = testimonials[0].offsetWidth + 30;
+let isDragging = false;
+let startPosition = 0;
+let currentTranslate = 0;
+let prevTranslate = 0;
+let animationID = 0;
 
-function updateCarousel() {
-    track.style.transform = `translateX(-${currentIndex * testimonialWidth}px)`;
+// Initialize carousel
+updateCarousel();
 
-    // Update dots
-    dots.forEach((dot, index) => {
-        dot.classList.toggle('active', index === currentIndex);
-    });
-}
-
-// Next button
-nextBtn.addEventListener('click', () => {
-    if (currentIndex < testimonials.length - 1) {
-        currentIndex++;
-    } else {
-        currentIndex = 0;
-    }
-    updateCarousel();
-});
-
-// Previous button
-prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-    } else {
-        currentIndex = testimonials.length - 1;
-    }
+// Recalculate on resize
+window.addEventListener('resize', () => {
+    testimonialWidth = testimonials[0].offsetWidth + 30;
     updateCarousel();
 });
 
@@ -167,5 +150,83 @@ setInterval(() => {
     updateCarousel();
 }, 5000);
 
-// Initialize carousel
-updateCarousel();
+function updateCarousel() {
+    currentTranslate = -currentIndex * testimonialWidth;
+    track.style.transform = `translateX(${currentTranslate}px)`;
+
+    // Update dots
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentIndex);
+    });
+}
+
+// Dragging functionality
+const touchStart = (index) => {
+    return function (event) {
+        currentIndex = index;
+        startPosition = getPositionX(event);
+        isDragging = true;
+        animationID = requestAnimationFrame(animation);
+        track.classList.add('grabbing');
+    }
+}
+
+const touchMove = (event) => {
+    if (isDragging) {
+        const currentPosition = getPositionX(event);
+        currentTranslate = prevTranslate + currentPosition - startPosition;
+    }
+}
+
+const touchEnd = () => {
+    cancelAnimationFrame(animationID);
+    isDragging = false;
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -100 && currentIndex < testimonials.length - 1) {
+        currentIndex += 1;
+    }
+
+    if (movedBy > 100 && currentIndex > 0) {
+        currentIndex -= 1;
+    }
+
+    setPositionByIndex();
+    track.classList.remove('grabbing');
+}
+
+const getPositionX = (event) => {
+    return event.type.includes('mouse')
+        ? event.pageX
+        : event.touches[0].clientX;
+}
+
+const setPositionByIndex = () => {
+    currentTranslate = -currentIndex * testimonialWidth;
+    prevTranslate = currentTranslate;
+    updateCarousel();
+}
+
+const animation = () => {
+    track.style.transform = `translateX(${currentTranslate}px)`;
+    if (isDragging) requestAnimationFrame(animation);
+}
+
+// Add event listeners
+testimonials.forEach((testimonial, index) => {
+    // Mouse events
+    testimonial.addEventListener('mousedown', touchStart(index));
+    testimonial.addEventListener('touchstart', touchStart(index), { passive: true });
+});
+
+window.addEventListener('mousemove', touchMove);
+window.addEventListener('touchmove', touchMove, { passive: true });
+
+window.addEventListener('mouseup', touchEnd);
+window.addEventListener('touchend', touchEnd);
+window.addEventListener('mouseleave', touchEnd);
+
+// Prevent image drag
+document.querySelectorAll('.testimonial img').forEach(img => {
+    img.addEventListener('dragstart', (e) => e.preventDefault());
+});

@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saira's Signature - Beauty Spa</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/android-chrome-192x192.png">
+    <link rel="manifest" href="site.webmanifest">
+    <!-- End Favicons -->
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +37,7 @@
                 <li><a href="#home">Home</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#why-choose">Why Choose Us</a></li>
+                <li><a href="#products">Products</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -37,23 +45,106 @@
         </nav>
     </header>
 
-    <!-- Hero Section with Image on Right -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1>Transform Your Beauty with Expert Care</h1>
             <p>
-                Experience the difference with personalized treatments and
-                professional expertise at Saira's Signature. Our premium beauty
-                services will reveal your most radiant self.
+                Experience the difference with personalized treatments and professional
+                expertise at Saira's Signature. Our premium beauty services will reveal
+                your most radiant self.
             </p>
             <a href="#contact" class="cta-button">Book Your Appointment</a>
         </div>
-        <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1599351431408-433ef72fe40b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80"
-                alt="Beauty Treatments" />
-        </div>
     </section>
 
+    <!-- Contact Section with Google Map -->
+    <section id="contact" class="section">
+        <h2 class="section-title fade-in">Contact Us</h2>
+        <div class="contact-content">
+            <div class="contact-info fade-in">
+                <h3>Get in Touch</h3>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h4>Location</h4>
+                        <p>
+                            91 Randhurst Village Dr #116<br />Mount Prospect, IL 60056<br />United
+                            States
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+1 (773) 799-4856</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email</h4>
+                        <p>info@sairasignature.com</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Hours</h4>
+                        <p>
+                            Mon-Fri: 10:00 AM - 06:00 PM<br />Sat: 10:00 AM - 04:00 PM<br />Sun:
+                            Closed
+                        </p>
+                    </div>
+                </div>
+
+                <div class="google-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.117251199927!2d-87.96394492433292!3d42.10766725344781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fba1c9d0b5b1f%3A0x8a7e6c0e4b8f3b1c!2s91%20Randhurst%20Village%20Dr%20%23116%2C%20Mount%20Prospect%2C%20IL%2060056%2C%20USA!5e0!3m2!1sen!2s!4v1690384567890!5m2!1sen!2s"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="contact-form fade-in">
+                <h3>Book an Appointment</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required placeholder="Your full name" />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Your email address" />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="Your phone number" />
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Interest</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="threading">Threading & Waxing</option>
+                            <option value="tint">Tint & Lamination</option>
+                            <option value="facials">Facial Treatments</option>
+                            <option value="advanced">Advanced Treatments</option>
+                            <option value="makeup">Makeup & Extensions</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Tell us about your beauty goals or any specific concerns..."></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Book Appointment</button>
+                </form>
+            </div>
+        </div>
+    </section>
     <!-- Services Section with Toggleable Tabs -->
     <section id="services" class="section">
         <h2 class="section-title fade-in">Our Premium Services</h2>
@@ -160,7 +251,7 @@
     </section>
 
     <!-- Full-width Why Choose Us Section -->
-    <section id="why-choose" class="full-width-section why-choose">
+    <section id="why-choose" class="full-width-section light-purple">
         <h2 class="section-title fade-in">Why Choose Saira's Signature?</h2>
         <div class="features-grid">
             <div class="feature fade-in">
@@ -198,30 +289,65 @@
         </div>
     </section>
 
+    <!-- Products Section -->
+    <section id="products" class="section">
+        <h2 class="section-title fade-in">Premium Beauty Products</h2>
+        <div class="products-grid">
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                        alt="Vitamin C Serum">
+                </div>
+                <h3>Vitamin C Serum</h3>
+                <p>Brightens skin and reduces signs of aging with potent antioxidants.</p>
+                <div class="product-price">$49.99</div>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                        alt="Hyaluronic Acid Moisturizer">
+                </div>
+                <h3>Hyaluronic Acid Moisturizer</h3>
+                <p>Deeply hydrates and plumps skin for a youthful glow.</p>
+                <div class="product-price">$39.99</div>
+
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                        alt="Retinol Night Cream">
+                </div>
+                <h3>Retinol Night Cream</h3>
+                <p>Powerful anti-aging treatment that renews skin overnight.</p>
+                <div class="product-price">$59.99</div>
+            </div>
+
+            <div class="product-card fade-in">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                        alt="Sunscreen SPF 50">
+                </div>
+                <h3>Sunscreen SPF 50</h3>
+                <p>Lightweight, non-greasy protection against UVA/UVB rays.</p>
+                <div class="product-price">$29.99</div>
+            </div>
+        </div>
+    </section>
+
     <!-- About Us Section -->
     <section id="about" class="section">
         <h2 class="section-title fade-in">About Us</h2>
         <div class="about-content">
             <div class="about-text fade-in">
                 <p>
-                    Meet Saira - an esthetician, beauty specialist, certified laser
-                    expert, lash and makeup artist, and a PCA professional. With over a
-                    decade of experience in the beauty industry, Saira has perfected her
-                    craft in prestigious salons and medical spas.
+                    Meet Saira, a seasoned esthetician, certified laser expert, lash and makeup artist, and PCA
+                    professional with over a decade of experience in top salons and medical spas. Her diverse expertise
+                    and deep understanding of skincare allow her to deliver treatments that prioritize both beauty and
+                    skin health. At Saira's Signature, our mission is to enhance your natural beauty and boost your
+                    confidence through exceptional, personalized care.
                 </p>
-                <p>
-                    Her diverse experience has equipped her with a deep understanding of
-                    client needs and the art of skincare. Saira's commitment to
-                    excellence ensures that every client leaves with heightened
-                    confidence and satisfaction in their revitalized skin.
-                </p>
-                <p>
-                    At Saira's Signature, we believe that beauty is about feeling
-                    confident in your own skin. Our mission is to provide exceptional
-                    treatments that enhance your natural beauty while prioritizing your
-                    skin's health and wellbeing.
-                </p>
-                <a href="#contact" class="cta-button">Schedule Consultation</a>
             </div>
             <div class="about-image fade-in">
                 <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
@@ -231,18 +357,10 @@
     </section>
 
     <!-- Full-width Testimonials Carousel -->
-    <section id="testimonials" class="full-width-section testimonials">
+    <section id="testimonials" class="full-width-section light-purple">
         <div class="testimonials-container">
             <h2 class="section-title fade-in">What Our Clients Say</h2>
             <div class="testimonial-slider">
-                <div class="slider-arrows">
-                    <div class="slider-arrow prev">
-                        <i class="fas fa-chevron-left"></i>
-                    </div>
-                    <div class="slider-arrow next">
-                        <i class="fas fa-chevron-right"></i>
-                    </div>
-                </div>
                 <div class="testimonial-track">
                     <!-- Testimonial 1 -->
                     <div class="testimonial">
@@ -345,110 +463,22 @@
         </div>
     </section>
 
-    <!-- Contact Section with Google Map -->
-    <section id="contact" class="section">
-        <h2 class="section-title fade-in">Contact Us</h2>
-        <div class="contact-content">
-            <div class="contact-info fade-in">
-                <h3>Get in Touch</h3>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div>
-                        <h4>Location</h4>
-                        <p>
-                            91 Randhurst Village Dr #116<br />Mount Prospect, IL 60056<br />United
-                            States
-                        </p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone-alt"></i>
-                    <div>
-                        <h4>Phone</h4>
-                        <p>+1 (773) 799-4856</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <div>
-                        <h4>Email</h4>
-                        <p>info@sairasignature.com</p>
-                    </div>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-clock"></i>
-                    <div>
-                        <h4>Hours</h4>
-                        <p>
-                            Mon-Fri: 10:00 AM - 06:00 PM<br />Sat: 10:00 AM - 04:00 PM<br />Sun:
-                            Closed
-                        </p>
-                    </div>
-                </div>
-
-                <div class="google-map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2961.117251199927!2d-87.96394452433292!3d42.10766725344781!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880fba1c9d0b5b1f%3A0x8a7e6c0e4b8f3b1c!2s91%20Randhurst%20Village%20Dr%20%23116%2C%20Mount%20Prospect%2C%20IL%2060056%2C%20USA!5e0!3m2!1sen!2s!4v1690384567890!5m2!1sen!2s"
-                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-            <div class="contact-form fade-in">
-                <h3>Book an Appointment</h3>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Full Name</label>
-                        <input type="text" id="name" name="name" required placeholder="Your full name" />
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required placeholder="Your email address" />
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone</label>
-                        <input type="tel" id="phone" name="phone" required placeholder="Your phone number" />
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Interest</label>
-                        <select id="service" name="service" required>
-                            <option value="">Select a service</option>
-                            <option value="threading">Threading & Waxing</option>
-                            <option value="tint">Tint & Lamination</option>
-                            <option value="facials">Facial Treatments</option>
-                            <option value="advanced">Advanced Treatments</option>
-                            <option value="makeup">Makeup & Extensions</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Preferred Date</label>
-                        <input type="date" id="date" name="date" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="4"
-                            placeholder="Tell us about your beauty goals or any specific concerns..."></textarea>
-                    </div>
-                    <button type="submit" class="cta-button">Book Appointment</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
     <!-- Enhanced Footer -->
     <footer>
         <div class="footer-content">
             <div class="footer-column">
-                <h3><i class="fas fa-spa"></i> Saira's Signature</h3>
+                <img class="footer-logo" src="./assets/Saira_s Signature Logo White.png"
+                    alt="Saira's Signature Logo White">
                 <p>
                     Transform your beauty with our expert skincare and beauty
                     treatments. Experience the difference with personalized care and
                     professional expertise.
                 </p>
                 <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/p/Sairas-signature-beauty-spa-100070835355417/" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sairassignaturebeauty/" target="_blank"
+                        rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
@@ -460,6 +490,12 @@
                     </li>
                     <li>
                         <a href="#services"><i class="fas fa-chevron-right"></i> Services</a>
+                    </li>
+                    <li>
+                        <a href="#why-choose"><i class="fas fa-chevron-right"></i> Why Choose Us</a>
+                    </li>
+                    <li>
+                        <a href="#products"><i class="fas fa-chevron-right"></i> Products</a>
                     </li>
                     <li>
                         <a href="#about"><i class="fas fa-chevron-right"></i> About Us</a>
@@ -501,16 +537,12 @@
             </div>
 
             <div class="footer-column">
-                <h3>Newsletter</h3>
-                <p>
-                    Subscribe to our newsletter for the latest updates and special
-                    offers.
-                </p>
-                <div class="newsletter-form">
-                    <input type="email" placeholder="Your email address" />
-                    <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                <h3>Contact Information</h3>
+                <div class="contact-item" style="margin-bottom: 1rem; color: #bbb">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>91 Randhurst Village Dr #116, Mount Prospect, IL 60056</span>
                 </div>
-                <div class="contact-item" style="margin-top: 1.5rem; color: #bbb">
+                <div class="contact-item" style="margin-bottom: 1rem; color: #bbb">
                     <i class="fas fa-phone-alt"></i>
                     <span>+1 (773) 799-4856</span>
                 </div>
