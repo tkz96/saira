@@ -192,7 +192,7 @@ nav {
 .hero-content {
   position: relative;
   z-index: 1;
-  max-width: 60ch;
+  max-width: 30rem;
   padding-top: 80px;
   padding-bottom: 80px;
   animation: fadeInUp 1s ease-out both;
