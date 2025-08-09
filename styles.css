@@ -17,7 +17,7 @@
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   line-height: 1.6;
   color: #333;
   background: #fff;
@@ -38,7 +38,7 @@ h6,
 .footer-column h3,
 .contact-info h3,
 .contact-form h3 {
-  font-family: "Lora", serif;
+  font-family: "Prata", serif;
   font-weight: 600;
 }
 
@@ -126,6 +126,58 @@ nav {
   background: #333;
   border-radius: 2px;
   transition: all 0.3s ease;
+}
+/* Award Section */
+.award-section {
+  background-color: #024d30; /* Dark green from the badge */
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+.award-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+.award-logo {
+  max-width: 150px;
+}
+
+.award-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.75rem;
+  color: #c4ff4d; /* Bright green from the badge text */
+}
+
+.award-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+}
+
+/* Desktop layout for the award section */
+@media (min-width: 768px) {
+  .award-container {
+    flex-direction: row; /* row keeps text on left, logo on right */
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .award-text {
+    flex: 1;
+    padding-right: 2rem;
+  }
+
+  .award-logo {
+    flex-shrink: 0;
+    order: 2; /* ensure logo stays on the right */
+  }
 }
 
 /* Mobile Navigation */

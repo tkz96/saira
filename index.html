@@ -38,9 +38,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Prata&family=Source+Sans+Pro:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
@@ -82,6 +83,25 @@
           beauty services will reveal your most radiant self.
         </p>
         <a href="#contact" class="cta-button">Book Your Appointment</a>
+      </div>
+    </section>
+
+    <!-- Award Section -->
+    <section id="award" class="award-section">
+      <div class="award-container">
+        <img
+          src="./assets/images/nextdoor.webp"
+          alt="Nextdoor Neighborhood Faves 2024"
+          class="award-logo"
+        />
+        <div class="award-text">
+          <h2>🏆 Proud Winner of 2024 Neighborhood Faves</h2>
+          <p>
+            Saira's Signature Beauty Spa is honored to be recognized as one of
+            the top businesses in our community by <strong>Nextdoor</strong>. We
+            thank all our amazing clients for their love and trust!
+          </p>
+        </div>
       </div>
     </section>
 
@@ -135,66 +155,18 @@
             ></iframe>
           </div>
         </div>
-        <div class="contact-form fade-in">
-          <h3>Book an Appointment</h3>
-          <form>
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Your full name"
-              />
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                placeholder="Your email address"
-              />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                required
-                placeholder="Your phone number"
-              />
-            </div>
-            <div class="form-group">
-              <label for="service">Service Interest</label>
-              <select id="service" name="service" required>
-                <option value="">Select a service</option>
-                <option value="threading">Threading & Waxing</option>
-                <option value="tint">Tint & Lamination</option>
-                <option value="facials">Facial Treatments</option>
-                <!-- <option value="advanced">Advanced Treatments</option> -->
-                <option value="makeup">Makeup & Extensions</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="date">Preferred Date</label>
-              <input type="date" id="date" name="date" required />
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                placeholder="Tell us about your beauty goals or any specific concerns..."
-              ></textarea>
-            </div>
-            <button type="submit" class="cta-button">Book Appointment</button>
-          </form>
-        </div>
+        <!-- Calendly inline widget begin -->
+        <div
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/sairassignature-info/30min?background_color=ffffff&text_color=000000&primary_color=6a5acd"
+          style="min-width: 320px; height: 700px"
+        ></div>
+        <script
+          type="text/javascript"
+          src="https://assets.calendly.com/assets/external/widget.js"
+          async
+        ></script>
+        <!-- Calendly inline widget end -->
       </div>
     </section>
     <!-- Services Section with Toggleable Tabs -->
