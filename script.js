@@ -60,37 +60,6 @@ document.querySelectorAll('.fade-in').forEach(el => {
 //     }
 // });
 
-// Form submission handling
-document.querySelector('form').addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    // Get form data
-    const formData = new FormData(this);
-    const data = {};
-    for (let [key, value] of formData.entries()) {
-        data[key] = value;
-    }
-
-    // Simple validation
-    if (!data.name || !data.email || !data.phone) {
-        alert('Please fill in all required fields.');
-        return;
-    }
-
-    // Simulate form submission
-    const button = this.querySelector('button[type="submit"]');
-    const originalText = button.textContent;
-    button.textContent = 'Sending...';
-    button.disabled = true;
-
-    setTimeout(() => {
-        alert('Thank you for your message! We will contact you soon to confirm your appointment.');
-        this.reset();
-        button.textContent = originalText;
-        button.disabled = false;
-    }, 2000);
-});
-
 // Service Tabs Functionality
 const tabButtons = document.querySelectorAll('.tab-btn');
 const serviceCategories = document.querySelectorAll('.service-category');
