@@ -180,6 +180,122 @@ nav {
   }
 }
 
+/* Award Section 2 - WCBRB */
+.award-section-secondary {
+  background: linear-gradient(135deg, #2c1810, #4a2c1a); /* Rich brown gradient */
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.award-container-secondary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.award-images-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.award-logo-primary {
+  max-width: 11.25rem;
+  height: auto;
+  border-radius: 0.9375rem;
+  border: 0.1875rem solid #d4af37; /* Gold border for logo */
+  box-shadow: 0 0.625rem 1.875rem rgba(212, 175, 55, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-logo-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.9375rem 2.5rem rgba(212, 175, 55, 0.5);
+}
+
+.award-certificate {
+  max-width: 12.5rem;
+  height: auto;
+  border-radius: 0.9375rem;
+  border: 0.1875rem solid #d4af37; /* Gold border for certificate */
+  box-shadow: 0 0.625rem 1.875rem rgba(212, 175, 55, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.award-certificate:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0.9375rem 2.5rem rgba(212, 175, 55, 0.5);
+}
+
+.award-text-secondary h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #d4af37; /* Gold color for heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.award-text-secondary p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  color: #f5f5f5;
+}
+
+.certificate-link {
+  display: inline-block;
+  padding: 0.8rem 1.8rem;
+  background: #d4af37;
+  color: #2c1810;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.certificate-link:hover {
+  background: #f4c430;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+}
+
+/* Desktop layout for award section 2 */
+@media (min-width: 768px) {
+  .award-container-secondary {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .award-images-group {
+    flex-direction: row;
+    gap: 2rem;
+    flex-shrink: 0;
+  }
+
+  .award-text-secondary {
+    flex: 1;
+  }
+
+  .award-text-secondary h2 {
+    text-align: left;
+  }
+
+  .award-text-secondary p {
+    text-align: left;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
 /* Mobile Navigation */
 @media (max-width: 992px) {
   .hamburger {
